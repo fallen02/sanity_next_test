@@ -8,7 +8,7 @@ import { urlForImage } from "@/app/sanity/utils";
 export default async function PostPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>
 }) {
   const { slug } = await params;
   // const POST_QUERY = `*[_type == "post" && slug.current == $slug][0]`;
